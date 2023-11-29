@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- <title>TravelBuddy</title> -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: larger;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        
+        #header {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        #chat-box {
+            width: 60%;
+            height: 400px;
+            overflow-y: auto;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 15px;
+        }
+        
+        .message-container {
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+        }
+        
+        .user-message {
+            background-color: #007AFF;
+            color: #fff;
+            border-radius: 15px 15px 0 15px;
+            padding: 10px 15px;
+            margin-right: 10px;
+        }
+        
+        .bot-message {
+            background-color: #F0F0F0;
+            color: #000;
+            border-radius: 15px 15px 15px 0;
+            padding: 10px 15px;
+            margin-left: 10px;
+        }
+        
+        #user-input-container {
+            width: 60%;
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+        
+        #user-input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            outline: none;
+            font-size: 16px;
+        }
+        
+        #send-button {
+            margin-left: 10px;
+            background-color: #007AFF;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1 id="header">TravelBuddy</h1>
+        <div id="chat-box">
+            <div class="message-container user-message">You: (Example Prompt) How do you say thank you in Japanese?</div>
+            <div class="message-container bot-message">TravelBuddy: Hi there! "Thank you" in Japanese is "arigatou" or "arigatou gozaimasu". Fun tip: 
+                try out the local onsen (hot spring) for a relaxing and authentic Japanese experience that's sure to leave you rejuvenated!</div>
+        </div>
+        <div id="user-input-container">
+            <input type="text" id="user-input" placeholder="Type your message..." />
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+    
+    <script src="./main.js"></script>
+</body>
+</html>
